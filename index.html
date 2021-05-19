@@ -7,6 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeQueen - Restaurant</title>
     <link rel="stylesheet" href="./css/index.css" />
+	<!--<script src="form.js"></script>-->
+	
+	
+	<script >
+function review_rest(){	
+	   var y=document.getElementById('name_area').value;
+	    var x=document.getElementById('review_area').value;
+		
+		document.getElementById('name').innerHTML=y;
+		document.getElementById('reviewed').innerHTML=x;
+		}
+	</script>
     <!-- <style> .
         /*  tag selector */
         body {
@@ -34,6 +46,10 @@
             color: aqua;
         }
     </style> -->
+	
+	
+	
+	
 </head>
 
 <body>
@@ -62,18 +78,18 @@
         <img class="banner" src="./images/banner.jpg" alt="Plate on Table" />
         <div class="feedback-form">
             <h4 class="form-header">Please leave your feedback below.</h4>
-            <form id="review-form" method="POST" action="./index.html">
+            <form name="reviewForm" id="review">
                 <div class="input-element">
                     <label for="full_name">Full Name:</label>
-                    <input type="text" placeholder="Sylvia" id="full_name" name="full_name" />
+                    <input type="text" placeholder="Sylvia" name="full_name" id="name_area"	/>
                 </div>
 
                 <div class="input-element">
                     <label for="review">Review:</label>
-                    <textarea id="review" name="review">
+                    <textarea id="review_area" name="review">
                     </textarea>
                 </div>
-                <input type="submit" value="Submit" />
+                <button onclick="review_rest()"/>Submit</button>
             </form>
         </div>
         <div class="feed">
@@ -98,7 +114,7 @@
                 </p>
             </div>
             </div>
-            <div class="review">
+            <!--<div class="review">
                 <h4 class="reviewer">Prossy</h4>
                
                 <img  class="avatar" src="./images/avatar.jpg"/>
@@ -117,6 +133,28 @@
                     Labore, eaque beatae.
                 </p>
             </div>
+
+            <div class="review">
+                <h4 class="reviewer">Prossy</h4>
+               
+                <img  class="avatar" src="./images/avatar.jpg"/>
+                <p class="review-text" id="rev">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ut sequi voluptates doloremque optio pariatur,
+                    iste quibusdam blanditiis modi cum ab cumque distinctio
+                    beatae atque repellendus ipsam itaque illo quas libero molestias praesentium?
+                    Unde ducimus maxime nostrum culpa, modi soluta odit hic doloremque?
+                    Labore, eaque beatae.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ut sequi voluptates doloremque optio pariatur,
+                    iste quibusdam blanditiis modi cum ab cumque distinctio
+                    beatae atque repellendus ipsam itaque illo quas libero molestias praesentium?
+                    Unde ducimus maxime nostrum culpa, modi soluta odit hic doloremque?
+                    Labore, eaque beatae.
+                </p>
+            </div>
+
+
             <div class="review">
                 <h4 class="reviewer">Daisy</h4>
                 <img  class="avatar" src="./images/avatar.jpg"/>
@@ -134,24 +172,11 @@
                     Unde ducimus maxime nostrum culpa, modi soluta odit hic doloremque?
                     Labore, eaque beatae.
                 </p>
-            </div>
+            </div>-->
             <div class="review">
-                <h4 class="reviewer">Marion</h4>
+                <h4 class="reviewer" id="name"></h4>
                 <img  class="avatar" src="./images/avatar.jpg"/>
-                <p class="review-text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ut sequi voluptates doloremque optio pariatur,
-                    iste quibusdam blanditiis modi cum ab cumque distinctio
-                    beatae atque repellendus ipsam itaque illo quas libero molestias praesentium?
-                    Unde ducimus maxime nostrum culpa, modi soluta odit hic doloremque?
-                    Labore, eaque beatae.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ut sequi voluptates doloremque optio pariatur,
-                    iste quibusdam blanditiis modi cum ab cumque distinctio
-                    beatae atque repellendus ipsam itaque illo quas libero molestias praesentium?
-                    Unde ducimus maxime nostrum culpa, modi soluta odit hic doloremque?
-                    Labore, eaque beatae.
-                </p>
+                <p class="review-text" id="reviewed"></p>
             </div>
         </div>
     </div>
